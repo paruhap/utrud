@@ -1,0 +1,1 @@
+export { default } from "file:///D:/YandexDisk/JOBS/Job/UTRUD/utrud_app/front/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
