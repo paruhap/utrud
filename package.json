@@ -12,10 +12,7 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.10.0",
-    "@nuxthub/core": "^0.8.24",
     "better-sqlite3": "^11.9.1",
-    "mime": "^4.0.7",
-    "nodemon": "^3.1.9",
     "nuxt": "^3.16.2",
     "nuxt-auth-utils": "^0.5.19",
     "swiper": "^11.2.6",
