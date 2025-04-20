@@ -11,8 +11,8 @@
                 <a target="_blank" :href="'https://wa.me/' + user.whatsapp" class="header-top-right__link"><img src="~/assets/img/icon/whatsapp.svg" alt=""></a>
                 <div :class="['top-bar-menu', { show: showMenu }]" @click="isModalOpen = true">
                     <NuxtLink @click.prevent="menuWatch()">
-                        <NuxtImg v-show="!isMenuOpen" src="icon/menu-icon.svg" width="24" height="24"/>
-                        <NuxtImg v-show="isMenuOpen" src="icon/close.svg" width="24" height="24"/>
+                        <img v-show="!isMenuOpen" src="~/assets/img/icon/menu-icon.svg" width="24" height="24"/>
+                        <img v-show="isMenuOpen" src="~/assets/img/icon/close.svg" width="24" height="24"/>
                     </NuxtLink>
                 </div>
             </div>
