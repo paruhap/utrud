@@ -3,18 +3,22 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['nuxt-auth-utils', '@nuxt/image'],
   css: ['~/assets/css/main.css'],
+
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
   },
+
   components: [
     {
       path: '~/components',
       pathPrefix: false,
     },
   ],
+
   image: {
     dir: 'assets/img'
   },
+
   runtimeConfig: {
     // Private config
     telegramToken: process.env.TELEGRAM_BOT_TOKEN,
@@ -26,11 +30,14 @@ export default defineNuxtConfig({
       groupId: process.env.TELEGRAM_GROUP_ID
     }
   },
+
   vite: {
     server: {
       allowedHosts: [
         '69f2-178-16-94-94.ngrok-free.app'
       ]
     }
-  }
+  },
+
+  compatibilityDate: '2025-04-21'
 })
