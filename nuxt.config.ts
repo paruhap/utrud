@@ -1,4 +1,7 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import dotenv from 'dotenv'
+
+dotenv.config()
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['nuxt-auth-utils', '@nuxt/image'],
@@ -21,20 +24,26 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     // Private config
+    apiSecret: process.env.NUXT_SESSION_PASSWORD,
     telegramToken: process.env.TELEGRAM_BOT_TOKEN,
     telegramChatId: process.env.TELEGRAM_CHAT_ID,
+    NUXT_SUPER_ADMIN_EMAIL: process.env.NUXT_SUPER_ADMIN_EMAIL,
+    NUXT_SUPER_ADMIN_PASSWORD: process.env.NUXT_SUPER_ADMIN_PASSWORD,
+    
     public: {
       // Public config
       telegramBotUsername: 'dCheFormBot',
       telegramToken: process.env.TELEGRAM_BOT_TOKEN,
-      groupId: process.env.TELEGRAM_GROUP_ID
+      groupId: process.env.TELEGRAM_GROUP_ID,
+      NUXT_SUPER_ADMIN_EMAIL: process.env.NUXT_SUPER_ADMIN_EMAIL,
+      NUXT_SUPER_ADMIN_PASSWORD: process.env.NUXT_SUPER_ADMIN_PASSWORD,
     }
   },
 
   vite: {
     server: {
       allowedHosts: [
-        '69f2-178-16-94-94.ngrok-free.app'
+        'http://localhost:3000/'
       ]
     }
   },

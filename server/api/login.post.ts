@@ -9,7 +9,9 @@ const bodySchema = z.object({
 export default defineEventHandler(async (event) => {
   const { email, password } = await readValidatedBody(event, bodySchema.parse)
 
-if (email === process.env.NUXT_SUPER_ADMIN_EMAIL && password === process.env.NUXT_SUPER_ADMIN_PASSWORD) {
+  const config = useRuntimeConfig()
+
+  if (email === config.NUXT_SUPER_ADMIN_EMAIL && password === config.NUXT_SUPER_ADMIN_PASSWORD) {
     // set the user session in the cookie
     // this server util is auto-imported by the auth-utils module
     await setUserSession(event, {
