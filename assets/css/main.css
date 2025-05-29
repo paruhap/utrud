@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Oranienbaum&display=swap');
+
+:root{
+    /* цвета */
+    --red-color:#651212;
+    --grey-color:rgb(221, 224, 203);
+    --dark-red-color:#151010;
+    --light-color:whitesmoke;
+    --transparent-red-2:rgba(97, 56, 56, 0.2);
+    --transparent-red-9:rgba(112, 55, 55, 0.9);
+    --transparent-red-5:rgba(118, 62, 62, 0.5);
+    --transparent-gray:rgba(194, 193, 188, 0.9);
+    --transparent-gray-5:rgba(248, 246, 240, 0.5);
+    --transparent-gray-2:#f3f0ea33;
+    --submit:rgb(192, 239, 192);
+    --background:linear-gradient(45deg, #efefeff0, #ffffffc9);
+    /* размер текста */
+    --text-sm:clamp(0.6rem, .8vw, 1rem);
+    --text-m:clamp(.8rem, 1.2vw, 1.2rem);
+    --text-base:clamp(1rem, 1.5vw, 1.5rem);
+    --text-btn:clamp(1.2rem, 1.7vw, 1.7rem);
+    --text-h3:clamp(1.3rem, 2vw, 2rem);
+    --text-h2:clamp(2rem, 3vw, 3rem);
+    --text-h1:clamp(3rem, 4vw, 4rem);
+    --text-l:clamp(4rem, 9vw, 8rem);
+    --text-xl:clamp(5rem, 12vw, 10rem);
+    /* font-family */
+    --ibm:"IBM Plex Mono";
+    --font-title:"Oranienbaum", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--dark-red-color);
+    background: linear-gradient(45deg, #fffffff1, #ffffffed), url(~/assets/img/fon2.jpg) no-repeat;
+    min-height: 100vh;
+    background-attachment:fixed;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Oranienbaum", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h1{
+    font-size: var(--text-xl);
+    color: var(--red-color);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.blok-title {
+    font-size: var(--text-h2);
+    border-bottom: 1px solid var(--transparent-red-9);
+    color: var(--transparent-red-9);
+}
+
+.hr50{
+    width: 50px;
+}
+
+.overflow{
+    overflow: hidden;
+}
